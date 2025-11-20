@@ -145,7 +145,6 @@ footer {
   color: #555;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .about {
     flex-direction: column;
