@@ -997,6 +997,27 @@
             font-size: 36px;
           }
         }
+        /* Download Resume Button */
+.download-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 8px 16px;
+  background: #4f46e5; /* Indigo */
+  color: #fff;
+  font-weight: 500;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.download-btn:hover {
+  background: #3730a3; /* Darker Indigo */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
 
         @media (max-width: 480px) {
           .main-title {
