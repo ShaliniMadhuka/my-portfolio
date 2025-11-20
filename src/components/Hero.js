@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import '../styles/Hero.css';
 
-
 const Hero = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [currentRole, setCurrentRole] = useState(0);
@@ -15,6 +14,11 @@ const Hero = () => {
     "IEEE Member",
     "Problem Solver"
   ];
+
+  // IMPORTANT: Force scroll to top when Hero component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   useEffect(() => {
     const handleMouseMove = (e) => {
@@ -71,7 +75,6 @@ const Hero = () => {
           preload="auto"
         >
           <source src="https://media.istockphoto.com/id/1345354768/video/digital-data-moving-on-circuit-board-and-cpu-4k-loop-backgrounds.mp4?s=mp4-640x640-is&k=20&c=fFOZkEfzonX0W6HxxP0d_w2EKdocs3Hxf9xa7ee7flM=" type="video/mp4" />
-
         </video>
 
         <div className="hero-container">
@@ -113,29 +116,26 @@ const Hero = () => {
                 <p className="hero-description">
                   Passionate software developer specializing in React Native and Java. 
                   Currently pursuing BSc (Hons) in IT at University of Moratuwa. 
-                 Member of IEEE Robotic And Automation Society University Of Moratuwa
+                  Member of IEEE Robotic And Automation Society University Of Moratuwa
                 </p>
 
                 <div className="hero-stats">
                   <div className="stat-item">
                     <span className="stat-icon">🎓</span>
                     <div>
-                      <strong>Softaware Devoloper</strong>
-                    
+                      <strong>Software Developer</strong>
                     </div>
                   </div>
                   <div className="stat-item">
                     <span className="stat-icon">🏆</span>
                     <div>
                       <strong>Freelancer</strong>
-                      
                     </div>
                   </div>
                   <div className="stat-item">
                     <span className="stat-icon">⚡</span>
                     <div>
-                      <strong>UI/UX Desighner</strong>
-                      
+                      <strong>UI/UX Designer</strong>
                     </div>
                   </div>
                 </div>
@@ -172,7 +172,7 @@ const Hero = () => {
                   </div>
                   <div className="floating-badge badge-1">
                     <span>💻</span>
-                    <p>Software Devoloper</p>
+                    <p>Software Developer</p>
                   </div>
                   <div className="floating-badge badge-2">
                     <span>☕</span>
@@ -180,7 +180,7 @@ const Hero = () => {
                   </div>
                   <div className="floating-badge badge-3">
                     <span>🎨</span>
-                    <p>UI/UX Desighner</p>
+                    <p>UI/UX Designer</p>
                   </div>
                 </div>
               </div>
@@ -318,11 +318,11 @@ const Hero = () => {
             </div>
             <div className="stat-box">
               <span className="stat-num"></span>
-              <p>Updated Devoper</p>
+              <p>Updated Developer</p>
             </div>
             <div className="stat-box">
               <span className="stat-num"></span>
-              <p>Smart Desighner</p>
+              <p>Smart Designer</p>
             </div>
           </div>
           <Link to="/projects" className="section-btn">
@@ -330,9 +330,6 @@ const Hero = () => {
           </Link>
         </div>
       </section>
-
-   
-      
     </>
   );
 };
