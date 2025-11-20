@@ -6,95 +6,21 @@ const About = () => {
   const [activeGallery, setActiveGallery] = useState("all");
 
   // Gallery images data with categories
-  const galleryImages = [
-    // Company Visits
-    {
-      id: 1,
-      src: '/lseg.jpg',
-      title: "LSEG Technology Visit",
-      desc: "Exploring financial technology innovations",
-      category: "company"
-    },
-    {
-      id: 2,
-      src: '/24.jpg',
-      title: "Zone 24x7 AI Labs",
-      desc: "Learning AI/ML enterprise solutions",
-      category: "company"
-    },
-    {
-      id: 3,
-      src: '/wso2s.jpg',
-      title: "WSO2 Innovation Hub",
-      desc: "Open-source technology exploration",
-      category: "company"
-    },
-    // IEEE Volunteering
-    {
-      id: 4,
-      src: '/open.jpg',
-      title: "IEEE Open Week",
-      desc: "Organizing tech exhibitions and workshops",
-      category: "volunteer"
-    },
-    {
-      id: 5,
-      src: '/mercorn.jpg',
-      title: "IEEE MERCON Conference",
-      desc: "Supporting international tech conference",
-      category: "volunteer"
-    },
-    {
-      id: 6,
-      src: '/robo.jpg',
-      title: "IEEE Robotic Day",
-      desc: "Coordinating robotics demonstrations",
-      category: "volunteer"
-    },
-    {
-      id: 7,
-      src: '/hackelite.jpg',
-      title: "IEEE Hackelite",
-      desc: "Managing hackathon operations",
-      category: "volunteer"
-    },
-    // Friends & Memories
-    {
-      id: 8,
-      src: '/fit.jpg',
-      title: "University Squad",
-      desc: "Late night coding sessions with friends",
-      category: "memories"
-    },
-    {
-      id: 9,
-      src: '/hardware.jpg',
-      title: "Team spirit",
-      desc: "First Year Hardware project squad",
-      category: "memories"
-    },
-    {
-      id: 10,
-      src: '/mer.jpeg',
-      title: "Project Celebration",
-      desc: "Celebrating successful project",
-      category: "memories"
-    },
-    {
-      id: 11,
-      src: '/zone.jpeg',
-      title: "Study Group",
-      desc: "Learning together, growing together",
-      category: "memories"
-    },
-    {
-      id: 12,
-      src: '/IEEE.jpeg',
-      title: "Tech Event ",
-      desc: "Making memories at tech events",
-      category: "memories"
-    }
-  ];
+ const galleryImages = [
+  { id: 1, src: process.env.PUBLIC_URL + '/lseg.jpg', title: "LSEG Technology Visit", desc: "Exploring financial technology innovations", category: "company" },
+  { id: 2, src: process.env.PUBLIC_URL + '/24.jpg', title: "Zone 24x7 AI Labs", desc: "Learning AI/ML enterprise solutions", category: "company" },
+  { id: 3, src: process.env.PUBLIC_URL + '/wso2s.jpg', title: "WSO2 Innovation Hub", desc: "Open-source technology exploration", category: "company" },
+  { id: 4, src: process.env.PUBLIC_URL + '/open.jpg', title: "IEEE Open Week", desc: "Organizing tech exhibitions and workshops", category: "volunteer" },
+  { id: 5, src: process.env.PUBLIC_URL + '/mercorn.jpg', title: "IEEE MERCON Conference", desc: "Supporting international tech conference", category: "volunteer" },
+  { id: 6, src: process.env.PUBLIC_URL + '/robo.jpg', title: "IEEE Robotic Day", desc: "Coordinating robotics demonstrations", category: "volunteer" },
+  { id: 7, src: process.env.PUBLIC_URL + '/hackelite.jpg', title: "IEEE Hackelite", desc: "Managing hackathon operations", category: "volunteer" },
+  { id: 8, src: process.env.PUBLIC_URL + '/fit.jpg', title: "University Squad", desc: "Late night coding sessions with friends", category: "memories" },
+  { id: 9, src: process.env.PUBLIC_URL + '/hardware.jpg', title: "Team spirit", desc: "First Year Hardware project squad", category: "memories" },
+  { id: 10, src: process.env.PUBLIC_URL + '/mer.jpeg', title: "Project Celebration", desc: "Celebrating successful project", category: "memories" },
+  { id: 11, src: process.env.PUBLIC_URL + '/zone.jpeg', title: "Study Group", desc: "Learning together, growing together", category: "memories" },
+  { id: 12, src: process.env.PUBLIC_URL + '/IEEE.jpeg', title: "Tech Event", desc: "Making memories at tech events", category: "memories" }
+];
+
 
   const filteredImages = activeGallery === "all" 
     ? galleryImages 
