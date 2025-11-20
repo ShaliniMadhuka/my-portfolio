@@ -64,9 +64,8 @@
           letter-spacing: 1px;
         }
 
-       // PART 2 - Continue from Part 1
+      
 
-        /* Profile Section */
         .profile-section {
           padding: 60px 0 80px;
         }
@@ -336,7 +335,6 @@
           animation: fadeIn 0.5s ease;
         }
 
-        /* Timeline */
         .timeline {
           position: relative;
           padding-left: 50px;
@@ -413,7 +411,7 @@
           margin: 0;
         }
 
-        /* Education Grid */
+      
         .education-grid {
           display: grid;
           grid-template-columns: repeat(2, 1fr);
@@ -456,10 +454,12 @@
         }
 
         .edu-card.featured {
-          grid-column: 1 / -1;
-          background: linear-gradient(135deg, rgba(138, 43, 226, 0.1), rgba(0, 191, 255, 0.05));
-          border: 2px solid rgba(138, 43, 226, 0.4);
-        }
+  grid-column-start: 1;
+  grid-column-end: -1;
+  background: linear-gradient(135deg, rgba(138, 43, 226, 0.1), rgba(0, 191, 255, 0.05));
+  border: 2px solid rgba(138, 43, 226, 0.4);
+}
+
 
         .edu-header {
           display: flex;
@@ -776,7 +776,7 @@
           color: rgba(255, 255, 255, 0.6);
         }
 
-        /* Gallery Section */
+      
         .gallery-section {
           padding: 100px 0;
         }
@@ -1023,7 +1023,7 @@
           }
         }
 
-        /* Accessibility */
+        
         @media (prefers-reduced-motion: reduce) {
           *,
           *::before,

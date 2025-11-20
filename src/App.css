@@ -1,4 +1,4 @@
-/* App.css - Global Styles */
+
 
 body, html {
   margin: 0;
@@ -11,7 +11,7 @@ a {
   text-decoration: none;
 }
 
-/* Button Style */
+
 .btn {
   background-color: #fff;
   color: #8b5cf6;
@@ -25,12 +25,12 @@ a {
   background-color: #e5e7eb;
 }
 
-/* Section Spacing */
+
 section {
   padding: 80px 20px;
 }
 
-/* Hero Section */
+
 .hero {
   min-height: 100vh;
   display: flex;
@@ -52,7 +52,7 @@ section {
   margin-bottom: 2rem;
 }
 
-/* About Section */
+
 .about {
   display: flex;
   flex-direction: row;
@@ -71,7 +71,7 @@ section {
   max-width: 500px;
 }
 
-/* Skills Section */
+
 .skills {
   text-align: center;
 }
@@ -95,7 +95,7 @@ section {
   transition: width 1s;
 }
 
-/* Projects Section */
+
 .projects {
   display: flex;
   flex-wrap: wrap;
@@ -125,7 +125,7 @@ section {
   padding: 15px;
 }
 
-/* Contact Section */
+
 .contact {
   text-align: center;
 }
@@ -137,7 +137,6 @@ section {
   font-weight: bold;
 }
 
-/* Footer */
 footer {
   text-align: center;
   padding: 20px;
@@ -145,7 +144,7 @@ footer {
   color: #555;
 }
 
-/* Responsive */
+
 @media (max-width: 768px) {
   .about {
     flex-direction: column;

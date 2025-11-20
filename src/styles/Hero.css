@@ -1,5 +1,4 @@
-/* Video Modal */
-/* BLOB SVG STYLE */
+
 .blob-shape {
   position: absolute;
   width: 300px;
@@ -66,7 +65,7 @@
   transform: rotate(90deg);
 }
 
-/* HERO SECTION */
+
 .hero {
   min-height: 100vh;
   display: flex;
@@ -234,7 +233,7 @@
   filter: drop-shadow(0 0 20px rgba(0, 191, 255, 0.5));
 }
 
-/* Hero Subtitle & Role */
+
 .hero-subtitle {
   font-size: clamp(20px, 3vw, 28px);
   color: rgba(255, 255, 255, 0.6);
@@ -260,7 +259,7 @@
   text-shadow: 0 0 20px rgba(0, 191, 255, 0.6);
 }
 
-/* Hero Description & Stats */
+
 .hero-description {
   font-size: 17px;
   color: rgba(255, 255, 255, 0.5);
@@ -307,7 +306,7 @@
   margin: 0;
 }
 
-/* Buttons */
+
 .hero-buttons {
   display: flex;
   gap: 15px;
@@ -366,7 +365,7 @@
   transition: transform 0.3s ease;
 }
 
-/* Profile Image */
+
 .hero-image-side {
   position: relative;
   display: flex;
@@ -408,7 +407,7 @@
   object-fit: cover;
 }
 
-/* Floating Badges */
+
 .floating-badge {
   position: absolute;
   background: rgba(0, 191, 255, 0.1);
@@ -451,7 +450,7 @@
   animation: float-badge 3s ease-in-out infinite 2s;
 }
 
-/* Scroll Indicator */
+
 .scroll-indicator {
   position: absolute;
   bottom: 40px;
@@ -489,7 +488,7 @@
   letter-spacing: 2px;
 }
 
-/* PREVIEW SECTIONS */
+
 .preview-section {
   min-height: 100vh;
   display: flex;
@@ -517,7 +516,7 @@
   text-align: center;
 }
 
-/* Section Tags & Titles */
+
 .section-tag {
   display: inline-block;
   font-size: 12px;
@@ -546,7 +545,7 @@
   filter: drop-shadow(0 0 20px rgba(0, 191, 255, 0.3));
 }
 
-/* Section Descriptions */
+
 .section-desc {
   font-size: 17px;
   color: rgba(255, 255, 255, 0.6);
@@ -555,7 +554,6 @@
   line-height: 1.7;
 }
 
-/* Section Button */
 .section-btn {
   display: inline-block;
   padding: 14px 30px;
@@ -577,7 +575,7 @@
   border-color: #00bfff;
 }
 
-/* Info Grid */
+
 .info-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -619,7 +617,7 @@
   box-shadow: 0 20px 40px rgba(59, 130, 246, 0.3);
 }
 
-/* Skills Grid */
+
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -674,7 +672,7 @@
   box-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
 }
 
-/* Stats Grid */
+
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -709,7 +707,6 @@
   box-shadow: 0 20px 40px rgba(59, 130, 246, 0.3);
 }
 
-/* Animations */
 @keyframes float-orb {
   0%, 100% { transform: translate(0, 0); }
   50% { transform: translate(30px, 30px); }
@@ -792,7 +789,7 @@
   50% { background-position: 100% 50%; }
 }
 
-/* RESPONSIVE */
+
 @media (max-width: 768px) {
   .hero-content { padding: 80px 0; }
   .hero-content-grid { grid-template-columns: 1fr; gap: 50px; }
