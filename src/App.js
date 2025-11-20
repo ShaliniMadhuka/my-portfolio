@@ -2,10 +2,10 @@ import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import About from './pages/About';
-import Skills from './pages/Skills';
-import Projects from './pages/Projects';
-import Contact from './pages/Contact';
+import About from './components/About';
+import Skills from './components/Skills';
+import Projects from './components/Projects';
+import Contact from './components/Contact';
 import Footer from './components/Footer';
 import './App.css';
 
