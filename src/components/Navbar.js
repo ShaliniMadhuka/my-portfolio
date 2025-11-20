@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import '../styles/navbar.css';
 
 const Navbar = () => {
@@ -8,6 +8,7 @@ const Navbar = () => {
   const [lastScrollY, setLastScrollY] = useState(0);
   const [hidden, setHidden] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
 
   // Advanced scroll detection with hide/show on scroll
   useEffect(() => {
@@ -63,6 +64,23 @@ const Navbar = () => {
     setMobileMenuOpen(false);
   }, []);
 
+  // Handle Home click - scroll to top
+  const handleHomeClick = (e) => {
+    e.preventDefault();
+    closeMobileMenu();
+    
+    if (location.pathname === '/') {
+      // Already on home page, just scroll to top
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      // Navigate to home first, then scroll to top
+      navigate('/');
+      setTimeout(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }, 100);
+    }
+  };
+
   // Check if current route is active
   const isActive = (path) => location.pathname === path;
 
@@ -70,18 +88,26 @@ const Navbar = () => {
     <>
       <nav className={`navbar ${scrolled ? "scrolled" : ""} ${hidden ? "hidden" : ""}`}>
         <div className="nav-container">
-          <Link to="/" className="logo" onClick={closeMobileMenu}>
+          <Link to="/" className="logo" onClick={handleHomeClick}>
             <img 
-                      src={process.env.PUBLIC_URL + '/shALMD.png'}
-                      alt="Shalini Madhuka" 
-                      className="std" 
-                    />
+              src={process.env.PUBLIC_URL + '/shALMD.png'}
+              alt="Shalini Madhuka" 
+              className="std" 
+            />
             <span className="logo-dot">.</span>
           </Link>
 
           <ul className={`nav-menu ${mobileMenuOpen ? "open" : ""}`}>
+            <li>
+              <a 
+                href="/" 
+                className={`nav-link ${isActive('/') ? "active" : ""}`}
+                onClick={handleHomeClick}
+              >
+                Home
+              </a>
+            </li>
             {[
-              { path: "/", label: "Home" },
               { path: "/about", label: "About" },
               { path: "/skills", label: "Skills" },
               { path: "/projects", label: "Projects" },
@@ -114,8 +140,6 @@ const Navbar = () => {
           <div className="mobile-overlay" onClick={closeMobileMenu}></div>
         )}
       </nav>
-
-  
     </>
   );
 };
