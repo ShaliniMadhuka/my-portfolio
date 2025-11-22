@@ -9,12 +9,10 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import './App.css';
 
-// Scroll to top component
 function ScrollToTop() {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    // Force scroll to top immediately when route changes
     window.scrollTo(0, 0);
   }, [pathname]);
 
@@ -22,8 +20,12 @@ function ScrollToTop() {
 }
 
 function App() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
-    <Router>
+    <Router basename="/my-portfolio">
       <ScrollToTop />
       <div className="App">
         <Navbar />
