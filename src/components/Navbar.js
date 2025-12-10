@@ -96,34 +96,34 @@ const Navbar = () => {
             />
             <span className="logo-dot">.</span>
           </Link>
-
-          <ul className={`nav-menu ${mobileMenuOpen ? "open" : ""}`}>
-            <li>
-              <a 
-                href="/" 
-                className={`nav-link ${isActive('/') ? "active" : ""}`}
-                onClick={handleHomeClick}
-              >
-                Home
-              </a>
-            </li>
-            {[
-              { path: "/about", label: "About" },
-              { path: "/skills", label: "Skills" },
-              { path: "/projects", label: "Projects" },
-              { path: "/contact", label: "Contact" }
-            ].map(({ path, label }) => (
-              <li key={path}>
-                <Link 
-                  to={path} 
-                  className={`nav-link ${isActive(path) ? "active" : ""}`}
-                  onClick={closeMobileMenu}
-                >
-                  {label}
-                </Link>
-              </li>
-            ))}
-          </ul>
+<ul className={`nav-menu ${mobileMenuOpen ? "open" : ""}`}>
+  <li>
+    <a 
+      href="/" 
+      className={`nav-link ${isActive('/') ? "active" : ""}`}
+      onClick={handleHomeClick}
+    >
+      Home
+    </a>
+  </li>
+  {[
+    { path: "/about", label: "About" },
+    { path: "/skills", label: "Skills" },
+    { path: "/projects", label: "Projects" },
+    { path: "/certification", label: "Certification" },
+    { path: "/contact", label: "Contact" }
+  ].map(({ path, label }) => (
+    <li key={path}>
+      <Link 
+        to={path} 
+        className={`nav-link ${isActive(path) ? "active" : ""}`}
+        onClick={closeMobileMenu}
+      >
+        {label}
+      </Link>
+    </li>
+  ))}
+</ul>
 
           <button 
             className="mobile-menu-toggle" 

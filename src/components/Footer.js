@@ -50,20 +50,7 @@ const Footer = () => {
             <p className="brand-description">
               Software Developer passionate about creating innovative solutions and contributing to the tech community through IEEE.
             </p>
-            <div className="brand-highlights">
-              <div className="highlight-item">
-                <span className="highlight-number">15+</span>
-                <span className="highlight-label">Projects</span>
-              </div>
-              <div className="highlight-item">
-                <span className="highlight-number">5+</span>
-                <span className="highlight-label">IEEE Events</span>
-              </div>
-              <div className="highlight-item">
-                <span className="highlight-number">174</span>
-                <span className="highlight-label">Scholarship</span>
-              </div>
-            </div>
+          
           </div>
 
           {/* Quick Links */}

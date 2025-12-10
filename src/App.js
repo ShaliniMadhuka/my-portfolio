@@ -7,6 +7,8 @@ import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import Certification from './components/Certification'; 
+
 import './App.css';
 
 function ScrollToTop() {
@@ -35,6 +37,7 @@ function App() {
           <Route path="/skills" element={<Skills />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/certification" element={<Certification />} />
         </Routes>
         <Footer />
       </div>

@@ -111,7 +111,7 @@ const About = () => {
                   <div className="icon-wrapper">🏆</div>
                   <div>
                     <h4>Scholarship Holder</h4>
-                    <p>Pass 174 - Merit Based Achievement</p>
+                    <p>Pass 174 </p>
                   </div>
                 </div>
                 <div className="highlight-item">
